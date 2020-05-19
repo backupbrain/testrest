@@ -1,0 +1,138 @@
+:root {
+  --primary-light: #dddfd4;
+  --primary-medium: #3fb0ac;
+  --primary-dark: #173e43;
+  --secondary-light: #fae596;
+  --neutral-white: #fff;
+  --neutral-black: #000;
+}
+
+/*
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'PT Mono', monospace;
+*/
+
+body {
+	font-size: 16px;
+	background-color: var(--primary-medium);
+}
+.btn-primary {
+	background-color: var(--secondary-light);
+	border-color: var(--secondary-light);
+	color: var(--primary-dark);
+}
+a {
+	color: var(--secondary-light);
+}
+
+body, p, div, li, dd, dt, th, td {
+	font-family: 'PT Sans';
+}
+footer {
+	padding: 2em 1em;
+}
+/*
+*[contenteditable="true"]{
+	display: inline-block;
+}
+*/
+.alerts {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-top: 0;
+    z-index: 200;
+}
+.alert {
+	margin-bottom: 0;
+}
+
+input, textarea, .dropdown, .code-editor, .code-editor div {
+	background-color: var(--primary-dark);
+	color: var(--primary-light);
+	border: 0;
+	padding: 0.2em 0.5em;
+}
+.code-editor div {
+	padding: 0.0em 0em;
+}
+.code {
+	font-family: 'PT Mono';
+	overflow: scroll;
+	white-space: nowrap;
+	font-size: 0.8em;
+}
+
+h1, h2 {
+	font-family: 'PT Sans Narrow';
+	font-weight: 700;
+}
+h2 {
+	font-size: 1.2em;
+}
+
+.code-editor {
+	height: calc(100vh - 15em);
+	width: 100%;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background-color: var(--primary-dark);
+    color: var(--neutral-white);
+}
+#content {
+	width: 100%;
+}
+#panel {
+	padding: 1em 1em;
+}
+#outputs {
+	padding-top: 1em;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+.show {
+	display: block !important;
+}
+
+ul.projects {
+	list-style-type: none;
+	margin: 0.5em 0 0 0;
+	padding: 0 1em;
+}
+li.project {
+	font-weight: bold;
+	padding: 0.3em 0 0 0;
+}
+ul.project--endpoints {
+	list-style-type: none;
+	margin: 0;
+	padding: 0.2em 0 0 0.5em;
+	font-weight: normal;
+}
+.endpoint__name {
+	padding-top: 0.2em;
+}
+.endpoint__delete {
+	color: #fff;
+}
+.collapse-vertical {
+	max-height: 0;
+	overflow: hidden;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	border: 0;
+}
