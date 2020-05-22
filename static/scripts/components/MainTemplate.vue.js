@@ -27,6 +27,7 @@ export default {
 				download: 'Download',
 				corsClientDisallowed: "Server's CORS policy disallows AJAX access from this client",
 				networkError: "Could not access this server. Endpoint doesn't exist or CORS policy disallows access.",
+				invalidInput: "Invalid input.",
 				saveEndpoint: 'Save',
 			}
 		}
@@ -78,13 +79,14 @@ export default {
 		};
 	},
 	mounted() {
-		console.log(this.$refs['sidebar']);
+		//console.log(this.$refs['sidebar']);
 	},
 	data() {
 		return {
 			alerts: [
 				{ type: 'danger', key: 'corsClientDisallowed', message: this.$t('corsClientDisallowed') },
 				{ type: 'danger', key: 'networkError', message: this.$t('networkError') },
+				{ type: 'danger', key: 'invalidInput', message: this.$t('invalidInput') },
 			],
 			state: {
 				isWorking: false,
@@ -143,10 +145,19 @@ export default {
 				var method = this.$refs['submitMethod'].value();
 				console.log(`${method} ${url}`);
 				const headers = this.getHeaders();
+				let data = null;
+				try {
+					data = JSON.parse(this.$refs['requestEditor'].value());
+					console.log(data);
+				} catch (err) {
+					this.$refs['invalidInput'][0].show();
+					return;
+				}
 				axios({
 					method: method,
 					url: url,
 					config: { headers: headers },
+					data: data,
 				}).then(response => {
 					console.log(response);
 					//var output = `HTTP/1.1 ${response.status} ${response.statusText}\n`;
