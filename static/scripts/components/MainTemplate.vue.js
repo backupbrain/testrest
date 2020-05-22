@@ -14,6 +14,7 @@ export default {
 	i18n: {
 		messages: {
 			en: {
+				brandName: 'Thimiama',
 				endpoint: 'Endpoint:',
 				makeRequest: 'Make Request',
 				request: 'Request',
@@ -342,7 +343,7 @@ export default {
 						</button>
 						<a class="navbar-brand" href="#">
 							<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-							RESTafari
+							{{ $t('brandName') }}
 						</a>
 					</nav>
 					<article id="panel">
