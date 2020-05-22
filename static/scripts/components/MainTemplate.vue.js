@@ -359,7 +359,7 @@ export default {
 										<label for="url">{{ $t('endpoint') }}</label>
 									</div-->
 									<url-input
-										classNames="flex-grow-1"
+										classNames="flex-grow-1 rounded-left"
 										type="url"
 										placeholder="http://example.com"
 										@change="urlChanged($event)"
@@ -369,7 +369,7 @@ export default {
 									></url-input>
 		        					<div class="input-group-prepend">
 										<dropdown-select
-											classNames="input-group-append"
+											classNames="input-group-append rounded-0"
 											:options="methodOptions"
 											:required="true"
 											@click="submitForm($event)"

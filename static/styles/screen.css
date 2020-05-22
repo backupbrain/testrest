@@ -153,3 +153,23 @@ ul.project--endpoints {
 	padding-bottom: 0;
 	border: 0;
 }
+.dropdown-menu {
+	background-color: var(--primary-light);
+	color: var(--neutral-white);
+}
+
+.alert-success {
+	background-color: var(--primary-dark);
+	color: var(--neutral-white);
+	border: 0px none;
+}
+.alert-info {
+	background-color: var(--primary-dark);
+	color: var(--neutral-white);
+	border: 0px none;
+}
+.alert-info {
+	background-color: var(--neutral-medium);
+	color: var(--neutral-white);
+	border: 0px none;
+}

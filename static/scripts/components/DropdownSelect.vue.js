@@ -92,7 +92,7 @@ export default {
 			></div>
 			<div class="btn-group">
 				<button
-					class="btn btn-primary code"
+					class="btn btn-primary code rounded-0"
 					type="button"
 					@click="click($event)"
 				>
