@@ -145,14 +145,20 @@ export default {
 				var method = this.$refs['submitMethod'].value();
 				console.log(`${method} ${url}`);
 				const headers = this.getHeaders();
-				let data = null;
-				try {
-					data = JSON.parse(this.$refs['requestEditor'].value());
-					console.log(data);
-				} catch (err) {
-					this.$refs['invalidInput'][0].show();
-					return;
+				let data = this.$refs['requestEditor'].value();
+				if (data == "") {
+					data = null;
+				} else {
+					try {
+						data = JSON.parse(data);
+						console.log(data);
+					} catch (err) {
+						this.$refs['invalidInput'][0].show();
+						return;
+					}
 				}
+				console.log("data: ");
+				console.log(data);
 				axios({
 					method: method,
 					url: url,
