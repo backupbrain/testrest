@@ -1,3 +1,4 @@
+/*
 :root {
   --primary-light: #dddfd4;
   --primary-medium: #3fb0ac;
@@ -5,6 +6,16 @@
   --secondary-light: #fae596;
   --neutral-white: #fff;
   --neutral-black: #000;
+}
+*/
+:root {
+  	--primary-light: #273C5F;
+  	--primary-medium: #223454;
+	--primary-dark: #1C2B45;
+	--secondary-light: #2878FF;
+	--neutral-white: #fff;
+	--neutral-light: #D7D8DA;
+	--neutral-black: #000;
 }
 
 /*
@@ -20,7 +31,7 @@ body {
 .btn-primary {
 	background-color: var(--secondary-light);
 	border-color: var(--secondary-light);
-	color: var(--primary-dark);
+	color: var(--neutral-white);
 }
 a {
 	color: var(--secondary-light);
@@ -31,6 +42,7 @@ body, p, div, li, dd, dt, th, td {
 }
 footer {
 	padding: 2em 1em;
+	color: var(--primary-light);
 }
 /*
 *[contenteditable="true"]{
@@ -50,7 +62,7 @@ footer {
 
 input, textarea, .dropdown, .code-editor, .code-editor div {
 	background-color: var(--primary-dark);
-	color: var(--primary-light);
+	color: var(--neutral-light);
 	border: 0;
 	padding: 0.2em 0.5em;
 }
@@ -70,6 +82,11 @@ h1, h2 {
 }
 h2 {
 	font-size: 1.2em;
+}
+
+nav {
+	background-color: var(--primary-dark);
+	color: var(--pramiry-light);
 }
 
 .code-editor {

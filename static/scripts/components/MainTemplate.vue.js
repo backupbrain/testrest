@@ -324,7 +324,7 @@ export default {
 					ref="sidebar"
 				></sidebar>
 				<div id="content">
-					<nav class="navbar navbar-light bg-light">
+					<nav class="navbar navbar-dark">
 						<button
 							class="navbar-toggler"
 							type="button"
@@ -354,9 +354,9 @@ export default {
 								@submit.prevent="submitForm($event)"
 							>
 								<div class="input-group">
-									<div class="input-group-prepend align-bottom pt-2 pr-3">
+									<!--div class="input-group-prepend align-bottom pt-2 pr-3">
 										<label for="url">{{ $t('endpoint') }}</label>
-									</div>
+									</div-->
 									<url-input
 										classNames="flex-grow-1"
 										type="url"

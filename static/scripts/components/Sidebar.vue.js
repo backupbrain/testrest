@@ -113,7 +113,7 @@ export default {
 		:class="{ active: isOpen }"
 	>
 
-		<nav class="navbar navbar-dark bg-dark">
+		<nav class="navbar navbar-dark">
 			<div class="navbar-brand">
 				Saved Endpoints
 			</div>
