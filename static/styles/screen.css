@@ -173,3 +173,7 @@ ul.project--endpoints {
 	color: var(--neutral-white);
 	border: 0px none;
 }
+.endpoint__delete {
+	background: transparent;
+	border: 0px solid none;
+}
