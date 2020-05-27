@@ -175,5 +175,5 @@ ul.project--endpoints {
 }
 .endpoint__delete {
 	background: transparent;
-	border: 0px solid none;
+	border: 0px solid transparent;
 }
