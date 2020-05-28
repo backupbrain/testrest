@@ -154,8 +154,9 @@ export default {
 						data = JSON.parse(data);
 						console.log(data);
 					} catch (err) {
-						this.$refs['invalidInput'][0].show();
-						return;
+						// do nothing, this is not JSON input
+						//this.$refs['invalidInput'][0].show();
+						//return;
 					}
 				}
 				console.log("data: ");
