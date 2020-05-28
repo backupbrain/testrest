@@ -146,6 +146,8 @@ export default {
 				var method = this.$refs['submitMethod'].value();
 				console.log(`${method} ${url}`);
 				const headers = this.getHeaders();
+				console.log("HEADERS:");
+				console.log(headers);
 				let data = this.$refs['requestEditor'].value();
 				if (data == "") {
 					data = null;
@@ -164,7 +166,7 @@ export default {
 				axios({
 					method: method,
 					url: url,
-					config: { headers: headers },
+					headers: headers,
 					data: data,
 				}).then(response => {
 					console.log(response);
