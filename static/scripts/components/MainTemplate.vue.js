@@ -1,5 +1,6 @@
 import Alert from './Alert.vue.js';
 import CodeView from './CodeView.vue.js';
+import CodeViewResponse from './CodeViewResponse.vue.js';
 import DropdownSelect from './DropdownSelect.vue.js';
 import UrlInput from './UrlInput.vue.js';
 import Sidebar from './Sidebar.vue.js';
@@ -38,6 +39,7 @@ export default {
 		'dropdown-select': DropdownSelect,
 		'url-input': UrlInput,
 		'code-view': CodeView,
+		'code-view-response': CodeViewResponse,
 		'sidebar': Sidebar,
 		'save-modal': SaveModal,
 		'header-input': HeaderInput,
@@ -116,7 +118,7 @@ export default {
 
 		},
 		urlVerified(event) {
-			// TODO: 
+			// TODO:
 		},
 		isValid() {
 			return true;
@@ -193,7 +195,7 @@ export default {
 						var response = error.response;
 						//console.error(error.response.headers);
 						//var output = `HTTP/1.1 ${response.status} ${response.statusText}\n`;
-						
+
 						this.response.status.code = response.status;
 						this.response.status.text = response.statusText;
 						if (response.headers) {
@@ -344,10 +346,6 @@ export default {
 								class="navbar-toggler-icon"
 							></span>
 						</button>
-						<a class="navbar-brand" href="#">
-							<img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-							{{ $t('brandName') }}
-						</a>
 					</nav>
 					<article id="panel">
 						<section id="inputs" class="d-flex">
@@ -487,13 +485,13 @@ export default {
 											:editable="false"
 										></header-input>
 									</div>
-									<code-view
+									<code-view-response
 										classNames="mt-2"
 										:editable="false"
 										:placeholder="''"
 										:initialValue="''"
 										ref="responseViewer"
-									></code-view>
+									></code-view-response>
 								</div>
 							</div>
 						</section>
